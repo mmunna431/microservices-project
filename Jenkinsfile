@@ -6,7 +6,7 @@ pipeline {
     stages {
         stage{
             steps{
-                withSonarQubeEnv(credentialsId: 'sonarid') {
+                withSonarQubeEnv('mysonar') {
                       sh "${scannerHome}/bin/sonar-scanner -Dsonar.projectKey=project1"
                     }
                 }
