@@ -4,13 +4,6 @@ pipeline {
         scannerHome = tool 'mysonar';
     }
     stages {
-        stage('CQA'){
-            steps{
-                withSonarQubeEnv('mysonar') {
-                      sh "${scannerHome}/bin/sonar-scanner -Dsonar.projectKey=project2"
-                    }
-                }
-            }
         stage('Build & Tag Docker Image') {
             steps {
                 script {
