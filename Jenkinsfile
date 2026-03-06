@@ -7,7 +7,7 @@ pipeline {
         stage('CQA'){
             steps{
                 withSonarQubeEnv('mysonar') {
-                      sh "${scannerHome}/bin/sonar-scanner -Dsonar.projectKey=project1"
+                      sh "${scannerHome}/bin/sonar-scanner -Dsonar.projectKey=project2"
                     }
                 }
             }
